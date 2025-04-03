@@ -22,11 +22,11 @@ public class groupproject {
             Connection connect = DriverManager.getConnection(url, username, password);
 
             Statement stmt = connect.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from customer_profile");
+            ResultSet rs = stmt.executeQuery("select * from Customer");
             while (rs.next()){
-                System.out.print("Customer Id: " + rs.getInt("customer_id")+"\t");
-                System.out.print("Contact Number: " + rs.getInt("contact_number")+"\t");
-                System.out.println("Shipping Details: " + rs.getString("shipping_details"));
+                System.out.print("Customer Id: " + rs.getInt("CustomerId")+"\t");
+                System.out.print("Contact Number: " + rs.getString("ContactNumber")+"\t");
+                System.out.println("Shipping Address: " + rs.getString("ShippingAddress"));
             }
             //try, no need connect.close();
         } catch (Exception e) {
