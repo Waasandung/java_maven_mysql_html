@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details</title>
+  <link rel="stylesheet" href="styles/products.css" />
+</head>
+<body>
+
+  <div class="top-bar">
+    <button class="back-button" onclick="goBack()">← Back</button>
+    <h1 class="page-title" id="productName">Product Name</h1>
+  </div>
+
+  <div class="main-detail-container">
+    <div class="product-detail" id="productInfo"></div>
+
+    <div class="form-section">
+      <label for="vendorSelect">Select Vendor:</label>
+      <select id="vendorSelect"></select>
+
+      <label for="customerSelect">Select Customer:</label>
+      <select id="customerSelect">
+        <option value="C001">C001</option>
+        <option value="C002">C002</option>
+        <option value="C003">C003</option>
+        <option value="C004">C004</option>
+      </select>
+    </div>
+  </div>
+
+  <button class="purchase-button" onclick="purchase()">Purchase</button>
+
+  <script src="scripts/product_detail.js"></script>
+</body>
+</html>

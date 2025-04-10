@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer</title>
+  <link rel="stylesheet" href="styles/customer.css" />
+</head>
+<body>
+
+  <div class="top-bar">
+    <button class="back-button" onclick="goBack()">← Back</button>
+    <h1 class="page-title">Customer</h1>
+    <select id="customerSelect" onchange="renderCustomer()">
+      <option value="C001" selected>C001</option>
+      <option value="C002">C002</option>
+      <option value="C003">C003</option>
+      <option value="C004">C004</option>
+    </select>
+  </div>
+
+  <div class="customer-info" id="customerInfo"></div>
+
+  <script src="scripts/customer.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header>
+    <h1><a href="usermainpage.html">Home Page</a></h1>
+		<button class="menubtn"><i class="fas fa-chevron-down"></i></button>
+		<nav>
+			<ul class="menu">
+				<li><a href="#Product_list">Product List</a></li>
+				<li><a href="#Order_history">Order History</a></li>
+				<li><a href="#Account">Account</a></li>
+			</ul>
+		</nav>
+  </header>
+  <div class="search-container">
+    <input id="searchInput" type="text" placeholder="Search..." />
+  </div>
+
+  <div class="grid-container">
+    <div class="grid-item" onclick="goToProducts()">Products</div>
+    <div class="grid-item" onclick="goToCustomer()">Customer</div>
+    <div class="grid-item" onclick="goToVendor()">Vendor</div>
+    <div class="grid-item">Vendor Admin</div>
+  </div>
+  <script src="scripts/usermainpage.js"></script> 
+</html>

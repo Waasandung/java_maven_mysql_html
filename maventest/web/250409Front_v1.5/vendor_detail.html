@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendor Details</title>
+  <link rel="stylesheet" href="styles/vendor.css" />
+</head>
+<body>
+
+  <div class="top-bar">
+    <button class="back-button" onclick="goBack()">← Back</button>
+    <h1 class="page-title" id="vendorName">Vendor</h1>
+  </div>
+
+  <section class="vendor-detail" id="vendorDetail"></section>
+
+  <section class="vendor-products" id="vendorProducts">
+    <h2>Products Provided</h2>
+    <div id="productGrid" class="vendor-list"></div>
+  </section>
+
+  <script src="scripts/vendor_detail.js"></script>
+</body>
+</html>

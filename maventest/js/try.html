@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>execute</title>
+</head>
+<body>
+    <h1>执行本地 Java 程序</h1>
+  <button onclick="runJavaProgram()">运行 Java 程序</button>
+  <div id="java-output">
+    </div>
+  
+  <script>
+    function runJavaProgram() {
+      fetch('http://localhost:8080/run-java-program')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then(output => {
+          console.log('Java 程序输出:', output);
+          document.getElementById('java-output').textContent = output;
+        })
+        .catch(error => {
+          console.error('执行 Java 程序失败:', error);
+          document.getElementById('java-output').textContent = '执行 Java 程序失败。';
+        });
+    }
+
+    fetch('http://localhost:8080/files/JCustomer.json')
+  .then(response => response.json())
+  .then(data => console.log('file1.json 内容:', data))
+  .catch(error => console.error('获取 file1.json 失败:', error));
+
+// 获取 file2.json
+fetch('http://localhost:8080/files/JOrder.json')
+  .then(response => response.json())
+  .then(data => console.log('file2.json 内容:', data))
+  .catch(error => console.error('获取 file2.json 失败:', error));
+    
+  </script>
+</body>
+</html>
